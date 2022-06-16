@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Con esta regla CSS utilizando el selector universal *
+"reseteamos" algunos valores que el navegador pone por defecto a los elementos en margin y padding,
+y configuramos el box-sizing como border-box para todos los elementos.
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la página sea suave */
+    scroll-behavior: smooth;
+}
+
+/* Especificamos font-family en body para que la hereden todos los elementos */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+header {
+    /* Uso de flexbox para distribuir elementos dentro del header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+    height: 90px;
+    /* Para que quede fijo en la ventana */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    /* Para agregarle una sombra */
+    box-shadow: 0 3px 10px -5px #5f5f5f;
+}
+
+/* list-style: none; 
+le quita los puntos a los items de la lista */
+ul#menu {
+    list-style: none;
+    /* Uso de flexbox para acomodar los items de lista */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.menu-item a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+}
+
+/* Con :hover podemos hacer que un elemento cambie
+al pasar el mouse sobre el
+*/
+.menu-item a:hover {
+    background-color: #c679f3;
+    color: #fff;
+}
+
+#logo {
+    width: 120px;
+}
+
+main {
+    /* Padding dejar lugar para el header fijo */
+    padding-top: 90px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    /* Esta propiedad agrega un espaciado arriba de la seccion solo cuando llegamos a la seccion a traves del menu, asi el header no tapa el título */
+    scroll-margin-top: 90px;
+    /* Este borde es solo para visualizar en este ejemplo el tamaño de las secciones */
+    border: 1px solid #000;
+}
+
+/* Uso de flexbox para centrar contenido en footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #c679f3;
+    color: #fff;
+}
